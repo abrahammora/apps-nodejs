@@ -17,7 +17,10 @@ app.use(express.json());
 
 //routes
 app.use(require('./routes/index.js'));
-app.use('/api/movies',require('./routes/movies.js'));
+app.use('/api/movies',require('./routes/movies'));
+app.use('/api/users',require('./routes/users'));
+
+
 // starting the server
 app.listen(app.get('port'),() => {
     console.log(`Server on port ${3000}`);
